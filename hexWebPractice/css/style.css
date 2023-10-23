@@ -381,7 +381,7 @@ height: auto;
     cursor: pointer;
 }
 
-.indexSubmitInput #submitBtn,
+.indexSubmitInput #submitBtn, 
 .faqSubmit #submitBtn {   /* css按鈕特效 */
     display: inline-flex;
     overflow: hidden;
@@ -392,20 +392,20 @@ height: auto;
     vertical-align: middle;
     justify-content: center;
 }
-.indexSubmitInput #submitBtn,
+.indexSubmitInput #submitBtn:hover, 
 .faqSubmit #submitBtn:hover,
-.indexSubmitInput #submitBtn,
+.indexSubmitInput #submitBtn:focus ,
 .faqSubmit #submitBtn:focus {
     background-color: #009a73;
     color: #ffffff;
 }
-.indexSubmitInput #submitBtn,
+.indexSubmitInput #submitBtn:active, 
 .faqSubmit #submitBtn:active {
     background: #004d3a;
     border: 2px solid #007458;
     color: rgb(255, 255, 255, .7);
 }
-.indexSubmitInput #submitBtn,
+.indexSubmitInput #submitBtn:disabled, 
 .faqSubmit #submitBtn:disabled {
     cursor: not-allowed;
     background: rgba(0, 0, 0, .08);
