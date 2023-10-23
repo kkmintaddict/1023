@@ -1,0 +1,787 @@
+@charset "utf-8";
+
+/*共同佈局*/
+img{
+max-width: 100%;  
+height: auto;   
+}
+.innerWrap{
+    margin: 0 auto;
+    letter-spacing: .045em; 
+}
+.header{
+    height: 30px;
+    background: rgba(74, 74, 74, 0.50);
+    padding: 21px 70px 27px;
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;   
+}
+.logoBox{
+    width:170px;
+    float: left;
+}
+.header h1{
+    text-indent: -9999px; /*把字推出去出*/
+    background-image: url('../image/Logo.png');  /*背景圖*/
+    background-size: cover;
+    width: 170px; /*原圖寬度*/
+    height: 36px; /*原圖高度*/
+    overflow: hidden;/*清除浮動*/
+}
+.header a{
+    text-decoration: none;
+    font-family: 'PingFang TC';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+    color: #fff;
+    padding: 28px 10px;
+}
+.menuBox{
+    float: right;
+    margin-top: 7px;
+}
+.header .menu{
+    display: flex; 
+}
+.header .menu li{
+    margin: 0 20px;
+}
+.menuBox .menu a:hover{ /*菜單特效*/
+    color: #00CC99;
+}
+.menuBox .menu a {
+    text-align: center;
+    letter-spacing: 0.25em;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+  .menuBox .menu li :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #00cc99;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .menuBox .menu li  :hover:before,
+  .hvr-underline-from-center:focus:before,
+  .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;/*特效結束*/
+  } 
+.footer{
+    height: 80px;
+    background-color: #323228;
+    padding: 32px 42px 20px;
+}
+.footerLogo{
+    width:170px;
+}
+.footerLogo img{
+    width:170px;   
+}
+.footerLogo p{
+    color: #9B9B9B;
+    float: right;
+    line-height: 1.8;
+    letter-spacing: .02em;
+}
+.footer .footerSns{
+    width: 163px;
+    height: 32px;
+    float: right;
+    padding-right: 23px;
+    transform: translateY(-50px);
+}
+.footerSns li{
+    float: left; 
+    padding: 0 5px;
+}
+.footerSns li a{
+    padding: 18px 6px 0px;
+}
+
+.content{                /*首頁首頁首頁*/
+    background-color:#EBEBEB;
+}
+.indexBannerSec{
+    width: auto;
+    height: 720px;
+    background-color: #9B9B9B;
+    background: url(../image/bg_index.png), no-repeat ;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    top: -78px;
+    vertical-align: middle;
+}
+.indexBannerSec h2{
+    font-size: 48px;
+    line-height: 1.6;
+    color: #00cc99;
+    padding: 45px 0px 55px;
+    margin: auto 0;
+}
+.indexBannerSec h2 span{
+    color: #FFF;
+}
+.indexCourse{
+    display: block;
+    background-color: #FFF;
+}
+.btnBox button{
+    width: 225px;
+    height: 58px;
+    background-color: #00cc99;
+    border: 2px solid #00cc99;
+    border-radius: 5px;
+    appearance: auto;
+    cursor: pointer;
+}
+/* css特效 */
+.btnBox button{
+    background-color: #00cc99;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    overflow: hidden;
+    touch-action: manipulation;
+    transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+      }
+.btnBox button:hover,
+.btnBox button:focus {
+    background-color: #009a73;
+    border: 2px solid #009a73;
+    color: #ffffff;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+.btnBox button:active {
+    background: #004d3a;
+    border: 2px solid #007458;
+    color: rgb(255, 255, 255, .7);  
+}
+.btnBox button:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+/* css特效結束 */
+
+.indexBannerSec .btnBox a{
+    padding: 24px 0 14px;
+}
+.btnBox button p{
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+    padding: 12px 8px 14px 33px;
+    display: inline-flex;
+    float: left;
+}
+.btnBox img{
+    display: inline-flex;
+    padding: 14px 22px 0 18px; 
+}
+.indexBannerSec .indexBannerText{
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+}
+.indexCourse{
+    padding: 140px 70px 30px;
+    position: relative;
+    top: -78px;
+}
+.indexCourse .courseTitle{
+    width: 940px;
+    margin: 0 auto;
+}
+.indexCourse h3{
+    font-size: 36px;
+    color: #00cc99;
+    display: inline;
+}
+.indexCourse h4{
+    font-size: 20px;
+    color: #9B9B9B;
+    display: inline-flex;
+    padding-left: 8px;
+}
+.indexCourse a{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #FFF;
+}
+.indexCourse button p{
+    color: #00cc99;
+    padding: 2px;
+}
+.indexCourse button{
+    width: 90px;
+    height: 35px;
+    padding: 5px 12px;
+    background-color: #FFF;
+    border: 1px solid #00CC99;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: center;
+}
+.indexCourse button a{
+    display: inline-block;
+    padding: 20px 10px;
+    width: 20px;
+}
+.indexCourse button:hover{
+    cursor: pointer;
+}
+.courseList{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    margin: 32px auto;
+    justify-content: center;
+}
+.courseList li{
+    display: block;
+    padding: 28px 22px; 
+    width: 256px; 
+    background: #FFF;
+    justify-content: center;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.35);
+}
+.courseList li:hover{
+    filter: brightness(110%);
+}
+.courseList li img{
+    display: block;
+    margin: 0 auto;
+}
+.courseList li h4{
+    font-size: 20px;
+    color: #4A4A4A;
+    text-align: center;
+    display: block;
+    padding: 15px 0;
+}
+.courseList li p{
+    display: block;
+    font-size: 16px;
+    color: #9B9B9B;
+    width: 260px;
+    line-height: 150%; /* 24px */
+    letter-spacing: .01em;
+}
+.indexCompare{
+    padding: 30px 70px;
+    background-color: #FFF;
+    position: relative;
+    top: -78px;
+}
+.indexCompare .compareTitle{
+    width: 940px;
+    margin: 60px auto 33px;
+}
+.indexCompare h3{
+    font-size: 36px;
+    color: #00cc99;
+    display: inline;
+}
+.indexCompare h4{
+    font-size: 20px;
+    color: #9B9B9B;
+    display: inline-flex;
+    padding-left: 8px;
+}
+.indexCompare table{
+    width: 940px;
+    margin: 32px auto 60px;
+    text-align: center;
+}
+.indexCompare table th{
+    color: #323223;
+    background: #EBEBEB;
+    padding: 16px 22px;
+    justify-content: space-between;
+    align-self: stretch;
+}
+.indexCompare table td{
+    color: #323223;
+    padding: 14px 22px;
+    border-bottom: 1px solid #EBEBEB;
+}
+.indexCompare table .better{
+    color: #00cc99;
+}
+.indexSubmit{
+    background-color:#EBEBEB;
+    padding: 80px 70px 30px;
+}
+.indexSubmit{
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+}
+.indexSubmit .submitTitle{
+    width: 508px;
+    float: left;  
+}
+.indexSubmit .indexSubmitInput{
+    width: 508px;
+    float: right;     
+}
+.indexSubmit h5{
+    color: #323223;
+    font-size: 30px;
+    display: inline;
+    line-height: 1.8;
+}
+.indexSubmit .indexSubmitInput input{
+    width: 420px;
+    height: 24px;
+    float: right;
+    padding: 16px 20px;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.indexSubmit .indexSubmitInput #submitBtn{
+    width: 140px;
+    height: 50px;
+    float: right;
+    background-color: #00CC99;
+    border: 1px solid #00CC99;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.indexSubmitInput #submitBtn,
+.faqSubmit #submitBtn {   /* css按鈕特效 */
+    display: inline-flex;
+    overflow: hidden;
+    touch-action: manipulation;
+    transition: background-color 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    justify-content: center;
+}
+.indexSubmitInput #submitBtn,
+.faqSubmit #submitBtn:hover,
+.indexSubmitInput #submitBtn,
+.faqSubmit #submitBtn:focus {
+    background-color: #009a73;
+    color: #ffffff;
+}
+.indexSubmitInput #submitBtn,
+.faqSubmit #submitBtn:active {
+    background: #004d3a;
+    border: 2px solid #007458;
+    color: rgb(255, 255, 255, .7);
+}
+.indexSubmitInput #submitBtn,
+.faqSubmit #submitBtn:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+/* css特效結束 */
+
+
+.courseBannerSec{        /*課程分頁*/
+    width: auto;
+    height: 720px;
+    background-color: #9B9B9B;
+    background: url(../image/bg_course2.png), no-repeat ;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    top: -78px;
+    vertical-align: middle;
+}
+.courseBannerSec h2{
+    font-size: 48px;
+    line-height: 1.5;
+    color: #fff;
+    padding: 10px 0px 5px;
+    margin: auto 0;
+}
+.courseBannerSec h3{
+    font-size: 24px;
+    color: #00CC99;
+    padding: 2px 0px 70px;
+}
+.courseBannerSec .courseBannerTitle{
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+}
+.courseBannerImg img{
+    display: flex;
+    float: right;
+    padding-left: 33px;
+    position: relative;
+    top: -280px;
+}
+.courseBannerImg{
+    width:940px;
+    height: auto;
+    margin: 0 auto;
+}
+.teacherSec{
+    background-color: #FFF;
+    padding: 120px 0 70px;
+    position: relative;
+    top: -80px;
+}
+.teacherSec .teacherBox{
+    width: 640px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.teacherSec .teacherBox img{
+    width: 155px;
+    height: 155px;
+}
+.teacherSec h3{
+    font-size: 36px;
+    color: #00cc99;
+    line-height: 1.5;
+    padding: 10px 36px;
+}
+.teacherSec h3 span{
+    color: #323228;
+}
+.teacherSec p{
+    line-height: 1.6;
+}
+.spacialSec {
+    background-color: #FFF;
+    padding: 40px 0;
+    position: relative;
+    top:-80px;
+}
+.spacialTitle h3{
+    font-size: 36px;
+    color: #00cc99;
+    display: inline;
+    padding-right: 6px;
+}
+.spacialTitle h4{
+    font-size: 20px;
+    color: #9B9B9B;
+    display: inline-flex;  
+}
+.spacialTitle{
+    display: block;
+    width: 620px;
+    margin: 0 auto;
+}
+.spacialSec ol {
+    width: 600px;
+    padding: 30px 0 30px 25px;
+    margin: 0 auto;
+}
+.spacialSec ol li{
+    width: 600px;
+    line-height: 1.6;
+    list-style-type: decimal;
+    padding-left: 2px;
+    padding-bottom: 5px;
+    
+}
+.mainpointSec {
+    background-color: #fff;
+    padding: 30px 0;
+    position: relative;
+    top:-80px;
+}
+.mainpointSec h3{
+    font-size: 36px;
+    color: #00cc99;
+    display: inline-block;
+    padding-right: 10px;
+}
+.mainpointSec h4{
+    font-size: 20px;
+    color: #9B9B9B;
+    display: inline-flex;
+}
+.mainpointTitle{
+    width: 620px;
+    margin: 0 auto;
+}
+.mainpointSec ul{
+    width: 620px;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+}
+.mainpointSec li{
+    padding: 18px 38px;
+}
+.mainpointSec ul p{
+    color: #9B9B9B;
+}
+.mainpointSec ul .gray{
+    background-color: #EBEBEB; 
+}
+.mainpointSec ul .gray p{
+    color: #000000;
+}
+.registerSec{   
+    margin: 10px auto 0px;
+    background-color: #EBEBEB;
+    justify-content:center;
+    padding: 40px 0 130px;
+}
+.registerSec h3{
+    color: #323223;
+    font-size: 30px;
+    line-height: 1.7;
+    padding-top: 10px;
+    padding-left: 2px;
+}
+.registerSec .registerGrid{
+    display: grid;
+    grid-template-columns: 400px 250px;
+    grid-template-rows: 55px 60px;
+    justify-content:center;
+}
+.registerSec .btnBox{
+    display: inline;   
+}
+
+.faqBanner{         /*問答區分頁*/
+    width: auto;
+    height: 720px;
+    background-color: #9B9B9B;
+    background: url(../image/bg_faq.png), no-repeat ;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    top: -78px;
+    align-items: center;
+}
+.faqBanner h2{
+    font-size: 48px;
+    color: #FFF;
+    padding: 250px 0px 10px;
+    text-align: center;
+}
+.faqBanner h3{
+    font-size: 24px;
+    color: #00CC99;
+    padding: 5px 0px 55px;
+    text-align: center;
+}
+.faqBanner input{
+    display: flex;
+    width: 620px;
+    padding: 18px 12px ;
+    justify-content: center;
+    align-items: flex-end;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    background: #FFF url(../image/search.svg ) no-repeat 570px center;
+    margin: 0 auto;
+}
+.question{
+    background-color: #FFF;
+    padding: 70px 0 20px;
+    position: relative;
+    top: -80px;
+}
+.question h3{
+    font-size: 36px;
+    color: #00cc99;
+    display: inline;
+}
+.question h4{
+    font-size: 20px;
+    color: #9B9B9B;
+    display: inline-flex;
+}
+.question .questionTitle{
+    width: 780px;
+    margin: 0 auto;
+}
+.question ul{
+    width: 780px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+.question ul li{           /*問題補做動畫效果*/
+    font-size: 20px;
+    line-height: 1.6; 
+    color: #323223;
+}
+.question ul .ans{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #9B9B9B;
+    padding: 8px 0 30px;
+}
+.question ul .ans span{
+    color: #00cc99;
+}
+.howtopay{
+    background-color: #FFF;
+    padding: 20px 0;
+    position: relative;
+    top:-80px;
+}
+.howtopay h3{
+    font-size: 36px;
+    color: #00cc99;
+    display: inline;
+}
+.howtopay h4{
+    font-size: 20px;
+    color: #9B9B9B;
+    display: inline-flex;
+}
+.howtopay .payTitle{
+    width: 780px;
+    margin: 0 auto;
+}
+.howtopay ul{
+    width: 780px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+.howtopay ul li{           
+    font-size: 20px;
+    line-height: 1.5; 
+    color: #323223;
+}
+.howtopay ul .ans{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #9B9B9B;
+    padding: 8px 0 30px;
+}
+.howtopay ul .ans span{
+    color: #00cc99;
+}
+.refund{
+    background-color: #FFF;
+    padding: 20px 0;
+    position: relative;
+    top:-80px;
+}
+.refund h3{
+    font-size: 36px;
+    color: #00cc99;
+    display: inline;
+}
+.refund h4{
+    font-size: 20px;
+    color: #9B9B9B;
+    display: inline-flex;
+}
+.refund .refundTitle{
+    width: 780px;
+    margin: 0 auto;
+}
+.refund ul{
+    width: 780px;
+    padding: 30px 0 20px;
+    margin: 0 auto;
+}
+.refund ul li{           
+    font-size: 20px;
+    line-height: 1.6; 
+    color: #323223;
+}
+.refund ul .ans{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #9B9B9B;
+    padding: 8px 0 30px;
+}
+.refund ul li p{           
+    font-size: 16px;
+    line-height: 1.6; 
+    color: #323223;
+    padding: 30px 0 10px 0;
+}
+.faqSubmit{
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+    padding: 120px 0 0px;
+    position: relative;
+    top: -30px;
+}
+.faqSubmit .faqTitle{
+    width: 508px;
+    float: left;  
+}
+.faqSubmit .faqSubmitInput{
+    width: 508px;
+    float: right;     
+}
+.faqSubmit h5{
+    color: #323223;
+    font-size: 30px;
+    display: inline;
+    line-height: 1.8;
+}
+.faqSubmit .faqSubmitInput input{
+    width: 420px;
+    height: 24px;
+    float: right;
+    padding: 16px 20px;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.faqSubmit textarea{
+    width: 420px;
+    height: 170px;
+    padding: 16px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    float: right;
+    margin-bottom: 20px;
+}
+.faqSubmitInput #submitBtn{
+    width: 140px;
+    height: 50px;
+    float: right;
+    background-color: #00CC99;
+    border: 1px solid #00CC99;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+}
